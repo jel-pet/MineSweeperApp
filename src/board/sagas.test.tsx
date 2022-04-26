@@ -3,7 +3,7 @@ import { Server } from "mock-socket";
 import { createWebSocketConnection, sendMessage, watchOnSocketEvents } from './sagas';
 import { PREVIOUS_COMMAND, SEND_MESSAGE } from './actions';
 import { expectSaga } from 'redux-saga-test-plan';
-import { NewGameCommand, OpenCommand } from './commands';
+import { GetMapCommand, NewGameCommand, OpenCommand } from './commands';
 
 
 test("the server keeps track of received messages, and yields them as they come in", async () => {
@@ -48,6 +48,17 @@ describe("Saga websocket communication", () => {
     .dispatch({ type: SEND_MESSAGE, payload: message })
     .run();
   });
+
+  
+  it("get map", async () => {
+    const message = new GetMapCommand()
+    const socket: WebSocket = await createWebSocketConnection();
+    return expectSaga(sendMessage, socket)
+    .put({ type: PREVIOUS_COMMAND, payload: message })
+    .dispatch({ type: SEND_MESSAGE, payload: message })
+    .run();
+  });
+
 
   it("test send message error", async () => {
     const errorMsg = "some random message";
