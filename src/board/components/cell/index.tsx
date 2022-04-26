@@ -1,6 +1,8 @@
 import {FC} from 'react';
 
-import {CellButton, CellContainer} from './styles';
+import {CellButton, CellButtonClicked, CellContainer} from './styles';
+
+const CELL_NOT_OPEN = "□";
 
 interface IProps {
     value: string,
@@ -10,7 +12,12 @@ interface IProps {
 const Cell: FC<IProps> = ({value, onClick}: IProps) => {
     return (
         <CellContainer>
-            <CellButton onClick={onClick}>{value}</CellButton>
+        {value === CELL_NOT_OPEN &&
+            <CellButton onClick={onClick}/>
+        }
+        {value !== CELL_NOT_OPEN &&
+            <CellButtonClicked onClick={onClick}>{value}</CellButtonClicked>
+        }
         </CellContainer>
     );
 };
