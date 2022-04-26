@@ -1,6 +1,6 @@
 # MineSweeper App
 
-![image](https://user-images.githubusercontent.com/94047181/164488680-6f73bffb-c676-4785-9796-69ab842db411.png)
+![image](https://user-images.githubusercontent.com/94047181/165310373-42ffbeaf-1925-4ddd-abcc-7a444913b992.png)
 
 You can choose the game difficulty level by clicking on "EASY", "MEDIUM" and "HARD" buttons.
 If you want to open a field, just click on it!
