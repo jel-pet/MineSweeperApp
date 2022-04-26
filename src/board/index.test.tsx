@@ -3,6 +3,7 @@ import { Provider } from 'react-redux';
 import store from '../store';
 import Board from './';
 import { parseBoard } from './utils';
+import WS from "jest-websocket-mock";
 
 test('renders board', () => {
   render(
