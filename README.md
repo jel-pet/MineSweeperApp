@@ -6,9 +6,9 @@ You can choose the game difficulty level by clicking on "EASY", "MEDIUM" and "HA
 If you want to open a field, just click on it!
 Once you lose a game you won't be able to open new fields, so please click on the buttons again to restart it!
 
-Technologies that are used here are: React, TypeScript
+Technologies that are used here are: React, TypeScript.
 
-State management: Redux + Redux-saga + Redux Toolkit
+State management: Redux + Redux-saga + Redux Toolkit.
 
 ![image](https://user-images.githubusercontent.com/94047181/164492356-80daa2dc-3e7c-42b7-b96c-9262f190ec66.png)
 
@@ -17,7 +17,7 @@ Redux saga event channel is used to communicate with websocket.
 Two functions are forked in watchOnSocketEvents, one of them to send messages and other one to listen to incoming messages. (Picture above)
 
 
-App organised using feature-first approach.
+App is organised using feature-first approach.
 
 App is deployed on a Netlify platform. Open https://mine-sweeper-app.netlify.app/ to view it.
 
